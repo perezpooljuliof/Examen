@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns = "http://www.w3.org/1999/xhtml"
+   		xmlns:h = "http://java.sun.com/jsf/html"
+   		xmlns:f = "http://java.sun.com/jsf/core">
+   <head>
+      <title>Login</title>
+   </head>
+   
+   <body>
+      	<h:form> 
+		   <h3>Iniciar Sesion</h3> 
+		   
+		   <table>
+		   		<tr>
+		   			<td>Usuario</td>
+		   		</tr>
+		   		<tr>
+		   			<td><h:inputText value="#{usuario}" /></td>
+		   		</tr>
+		   		<tr>
+		   			<td>Contraseña</td>
+		   		</tr>
+		   		<tr>
+		   			<td><h:inputSecret value="#{password}" /></td>
+		   		</tr>
+		   		<tr>
+		   			<td>
+		   				<h:commandButton action = "#{login.iniciarSesion}" value = "Login">
+		   				</h:commandButton>
+		   			</td>
+		   		</tr>
+		   </table>
+		   
+		</h:form> 
+   </body>
+</html>
