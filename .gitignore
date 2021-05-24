@@ -1,5 +1,7 @@
 *.class
 /target/**
-/.idea/
 /.settings/**
 *.iml
+*.directory
+*.kate-swp
+.idea/
