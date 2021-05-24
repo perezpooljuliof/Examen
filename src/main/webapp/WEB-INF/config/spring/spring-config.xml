@@ -25,4 +25,5 @@
 	</context:component-scan>
 
     <import resource="spring-orm.xml"/>
+	<import resource="spring-security.xml"/>
 </beans>
