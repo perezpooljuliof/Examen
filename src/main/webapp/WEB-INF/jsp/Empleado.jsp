@@ -3,7 +3,7 @@
 	<head></head>
 	<body>
 		<h3>Registro de empleado</h3>
-		<form:form method="POST" action="/SpringJPAExample/agregaEmpleado" modelAttribute="empleado">
+		<form:form method="POST" action="./agregaEmpleado" modelAttribute="empleado">
 			<table>
 				<tr>
 					<td>Nombre:</td>
