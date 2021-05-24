@@ -1,17 +1,19 @@
 package mx.com.examen.view;
 
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ManagedProperty;
+import javax.faces.bean.RequestScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 
 import mx.com.examen.dto.Empresa;
 import mx.com.examen.service.EmpresaServicio;
+import org.springframework.stereotype.Component;
 
-@Named
-@Scope("session")
-@ManagedBean(name = "empresaBean")
+@Component
 public class EmpresaManagedBean {
 	private String rfc;
 	private String razonSocial;
@@ -21,7 +23,7 @@ public class EmpresaManagedBean {
 	private String email;
 
 	
-	@Inject
+	@Autowired
     private EmpresaServicio empresaServicio;
 	
 	public String getRazonSocial() {
@@ -71,7 +73,7 @@ public class EmpresaManagedBean {
 	/**
 	 * Funcion para guardar la informacion de la empresa
 	 */
-	public void guardar() {
+	public String guardar() {
 		System.out.println("Guardando informacion de empresa.");
 		Empresa empresa = new Empresa();
 		empresa.setRazonSocial(this.razonSocial);
@@ -82,5 +84,6 @@ public class EmpresaManagedBean {
 		empresa.setEmail(this.email);
 		
 		empresaServicio.save(empresa);
+		return "exito";
 	}
 }

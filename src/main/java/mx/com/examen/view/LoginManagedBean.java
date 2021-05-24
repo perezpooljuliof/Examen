@@ -7,13 +7,11 @@ import javax.faces.bean.RequestScoped;
 @ManagedBean(name = "login", eager = true)
 @RequestScoped
 public class LoginManagedBean {
-	@ManagedProperty(value = "#{usuario}")
 	private String usuario;
-	@ManagedProperty(value = "#{password}")
 	private String password;
 	
 	public LoginManagedBean() {
-		System.out.println("HelloWorld started!");
+		System.out.println("Login started!");
 	}
 
 	public String getUsuario() {
