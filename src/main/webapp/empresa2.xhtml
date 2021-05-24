@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns = "http://www.w3.org/1999/xhtml"
+   		xmlns:h = "http://java.sun.com/jsf/html"
+   		xmlns:f = "http://java.sun.com/jsf/core">
+   <head>
+      <title>Empresa</title>
+   </head>
+   
+   <body>
+      	<h:form> 
+			<table>
+				<tr>
+					<td>Bienvenido</td>
+					<td colspan="2"><h:inputText value="#{login.usuario}" /></td>
+				</tr>
+		   		<tr>
+		   			<td>RFC</td>
+		   			<td colspan="2"><h:inputText value="#{empresaBean2.rfc}" /></td>
+		   		</tr>
+		   		<tr>
+		   			<td>Razon Social</td>
+		   			<td colspan="2"><h:inputText value="#{empresaBean2.razonSocial}" /></td>
+		   		</tr>
+		   		<tr>
+		   			<td>Contacto</td>
+		   			<td colspan="2"><h:inputText value="#{empresaBean2.contacto}" /></td>
+		   		</tr>
+		   		<tr>
+		   			<td>Telefono Fijo</td>
+		   			<td>Celular</td>
+		   			<td>Email</td>
+		   		</tr>
+		   		<tr>
+		   			<td><h:inputText value="#{empresaBean2.telefonoFijo}" /></td>
+		   			<td><h:inputText value="#{empresaBean2.celular}" /></td>
+		   			<td><h:inputText value="#{empresaBean2.email}" /></td>
+		   		</tr>
+		   		<tr>
+		   			<td>
+		   				<h:commandButton action = "#{empresaBean2.guardar}" value = "Login">
+		   				</h:commandButton>
+		   			</td>
+		   		</tr>
+		   </table>
+			
+		</h:form> 
+   </body>
+</html>
